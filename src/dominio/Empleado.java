@@ -3,8 +3,8 @@ package dominio;
 import java.time.LocalDate;
 
 public class Empleado extends Persona {
-    // Atributos propios
-    private static int contadorLegajo = 1000;
+
+	private static int contadorLegajo = 1000;
     private int legajo;
     private String puesto;
 
