@@ -7,7 +7,14 @@ public class Empleado extends Persona {
 	private static int contadorLegajo = 1000;
     private int legajo;
     private String puesto;
-
+    
+    
+    
+    public Empleado() {
+        super(); // llama al constructor vacío de Persona
+        this.legajo = contadorLegajo++;
+        this.puesto = "sin puesto";
+    }
     // Constructor
     public Empleado(String dni, String nombre, String apellido, LocalDate fechaNacimiento,
                     String genero, String direccion, String telefono, String email,
@@ -29,7 +36,12 @@ public class Empleado extends Persona {
     public void setPuesto(String puesto) {
         this.puesto = puesto;
     }
-
+    
+    // Método estático que devuelve el próximo legajo
+    public static int devuelveProximoLegajo() {
+        return contadorLegajo;
+    }
+    
     // Método toString
     @Override
     public String toString() {
